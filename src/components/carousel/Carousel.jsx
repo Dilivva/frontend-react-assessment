@@ -6,10 +6,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
-
 import ContentWrapper from "../ContentWrapper";
 import Img from "../lazyLoadImage/Img";
-import Genres from "../genres/Genres";
 import "./style.scss";
 import PosterFallback from "../../assets/no-poster.png";
 
@@ -74,7 +72,6 @@ const Carousel = ({ data, loading, endpoint, title }) => {
                 >
                   <div className="posterBlock">
                     <Img src={posterUrl} />
-                    <Genres data={item.genre_ids.slice(0, 2)} />
                   </div>
                   <div className="textBlock">
                     <span className="title">{item.title || item.name}</span>
@@ -90,7 +87,6 @@ const Carousel = ({ data, loading, endpoint, title }) => {
           </div>
         ) : (
           <div className="loadingSkeleton">
-            {skItem()}
             {skItem()}
             {skItem()}
             {skItem()}

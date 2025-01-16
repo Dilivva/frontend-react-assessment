@@ -44,15 +44,18 @@ const HeroBanner = () => {
       ></div>
       <ContentWrapper className="">
         <div className="flex flex-col items-center text-white text-center relative mx-auto max-w-[800px]">
-          <span className="text-5xl font-bold mb-2 md:text-7xl">Welcome.</span>
+          <span className="text-5xl font-bold mb-2 md:text-7xl text-orange-400">
+            Send24 Movies
+          </span>
           <span className="text-xl font-medium mb-10 md:text-2xl ">
-            Millions of movies, TV shows and people to discover. Explore now.
+            Millions of movies, TV shows and people to discover on .. Explore
+            now.
           </span>
           <div className="flex items-center w-full justify-center">
             <input
               className="h-12 w-full text-sm rounded-l-2xl bg-white text-black px-4 border-none outline-none md:text-xl md:px-[30px] md:h-16"
               type="text"
-              placeholder="Search for movies or tv shows..."
+              placeholder="Search for movies..."
               onChange={(e) => setQuery(e.target.value)}
               onKeyUp={handleSearch}
             />
