@@ -11,14 +11,7 @@ import useFetch from "../../../hooks/useFetch";
 const DetailsBanner = () => {
   const { mediaType, id } = useParams();
   const { data, loading } = useFetch(`/${mediaType}/${id}`);
-
   const { url } = useSelector((state) => state.home);
-
-  const toHoursAndMinutes = (totalMinutes) => {
-    const hours = Math.floor(totalMinutes / 60);
-    const minutes = totalMinutes % 60;
-    return `${hours}h${minutes > 0 ? ` ${minutes}m` : ""}`;
-  };
 
   return (
     <div className="detailsBanner">
@@ -67,14 +60,6 @@ const DetailsBanner = () => {
                           <span className="text bold">Release Date: </span>
                           <span className="text">
                             {dayjs(data.release_date).format("MMM D, YYYY")}
-                          </span>
-                        </div>
-                      )}
-                      {data.runtime && (
-                        <div className="infoItem">
-                          <span className="text bold">Runtime: </span>
-                          <span className="text">
-                            {toHoursAndMinutes(data.runtime)}
                           </span>
                         </div>
                       )}
