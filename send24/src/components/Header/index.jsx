@@ -46,6 +46,7 @@ const Header = () => {
                         <div className={style.mobileMenu}>
                             <div className={style.midSection}>
                                 <p onClick={() => handleNavigation("/home")}>Home</p>
+                                <p onClick={() => handleNavigation("/properties")}>Properties</p>
                             </div>
                         </div>
                     )}
@@ -54,6 +55,7 @@ const Header = () => {
                 <>
                     <div className={style.midSection}>
                         <p onClick={() => handleNavigation("/home")}>Home</p>
+                        <p onClick={() => handleNavigation("/properties")}>Properties</p>
                     </div>
                 </>
             )}
