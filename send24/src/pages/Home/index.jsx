@@ -1,8 +1,11 @@
+import Hero from "./Hero";
+import FindNewHome from "./FindNewHome";
+
 const Home = () => {
     return(
         <div>
-            <h1>Hello there</h1>
-
+            <Hero/>
+            <FindNewHome/>
         </div>
     )
 }
