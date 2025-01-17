@@ -1,0 +1,68 @@
+.container {
+  height: 36px;
+  width: 200px;
+  background-color: white;
+  border: 1px #bbbcc2 solid;
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding: 0px 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.textOne {
+  font-family: "Inter";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #171a25;
+  letter-spacing: -0.30000001192092896px;
+}
+
+.listContainer {
+  position: absolute;
+  top: 36px;
+  left: 0px;
+
+  height: 200px;
+  width: 200px;
+  overflow-y: scroll;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  background-color: white;
+  border: 1px #ccc solid;
+  border-radius: 6px;
+
+  padding: 20px;
+
+  scrollbar-color: #171a25 white;
+  scrollbar-width: thin;
+  z-index: 20;
+}
+
+
+.item {
+  transition: all .4s;
+  padding: 4px;
+}
+
+.item:hover {
+  background-color: #76a0f0;
+}
+
+.icon {
+  position: absolute;
+  right: 0px;
+  border: 50%;
+}
+
+@media (max-width: 800px) {
+  .container, .listContainer {
+    width: 50%;
+  }
+}
