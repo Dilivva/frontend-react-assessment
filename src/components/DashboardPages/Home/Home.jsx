@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
-      <h3 className={styles.headerText}>Stories</h3>
+      <h3 className={styles.headerText}>Home</h3>
 
       <TableControl setSelected={setSelected} selected={selected} list={LISTONE} />
 
