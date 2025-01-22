@@ -42,9 +42,9 @@ const Products = () => {
   }
 
   return products ? (
-    <div className="mt-[10px] lg:ml-[250px] p-10">
+    <div className="mt-[80px] lg:ml-[250px] p-10 ">
       <div className="w-full min-h-screen">
-        <h2 className="text-4xl font-bold text-primary-dark lg:my-10">
+        <h2 className="text-4xl font-bold text-primary-dark my-5 lg:my-10">
           Products
         </h2>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[40px]">
