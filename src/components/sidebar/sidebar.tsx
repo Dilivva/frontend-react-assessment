@@ -22,10 +22,10 @@ const Sidebar = () => {
     },
   ];
   return (
-    <nav>
+    <>
       {/* desktop sidenav */}
       <div className="hidden lg:block">
-        <div className="fixed left-0 top-0 bottom-0 z-10 border-r bg-gray-50 w-[250px]">
+        <div className="fixed left-0 top-0 bottom-0 z-30 border-r bg-gray-50 w-[250px]">
           <div className="w-full h-full py-10">
             <Link
               to={"/"}
@@ -78,7 +78,7 @@ const Sidebar = () => {
           </SheetContent>
         </Sheet>
       </div> */}
-    </nav>
+    </>
   );
 };
 
