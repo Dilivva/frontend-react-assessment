@@ -9,7 +9,7 @@ import { Link } from "react-router";
 import { DialogHeader } from "../ui/dialog";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
 import { Menu, Search } from "lucide-react";
-import { Newspaper, Store } from "lucide-react";
+import { Store } from "lucide-react";
 import { Button } from "../ui/button";
 import {
   DropdownMenu,
@@ -33,11 +33,6 @@ const Navbar = () => {
       link: "/",
       name: "Shop",
       icon: <Store />,
-    },
-    {
-      link: "/about-us",
-      name: "About Us",
-      icon: <Newspaper />,
     },
   ];
   return (

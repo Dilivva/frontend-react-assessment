@@ -42,7 +42,7 @@ const Products = () => {
   }
 
   return products ? (
-    <div className="mt-[80px] lg:ml-[250px] p-10">
+    <div className="mt-[10px] lg:ml-[250px] p-10">
       <div className="w-full min-h-screen">
         <h2 className="text-4xl font-bold text-primary-dark lg:my-10">
           Products
@@ -51,7 +51,7 @@ const Products = () => {
           {products.map((product: ProductData) => (
             <Link
               to={product.id.toString()}
-              className="flex flex-col space-y-3 w-full hover:bg-gray-50 p-3 transition-all"
+              className="flex flex-col space-y-3 w-full hover:bg-gray-50 p-3 transition-all bg-gray-300/50 rounded-md"
               key={product.id}
             >
               <div className="h-[200px] w-[250px] rounded-xl overflow-hidden">

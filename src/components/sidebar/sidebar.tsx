@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import React from "react";
-import { Newspaper, Store } from "lucide-react";
+import { Store } from "lucide-react";
 
 type sidebarLinks = {
   link: string;
@@ -14,11 +14,6 @@ const Sidebar = () => {
       link: "/",
       name: "Shop",
       icon: <Store />,
-    },
-    {
-      link: "/about-us",
-      name: "About Us",
-      icon: <Newspaper />,
     },
   ];
   return (
