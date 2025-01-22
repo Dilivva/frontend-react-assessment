@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router";
 import Layout from "./components/layout/layout";
+import Products from "./components/products/products";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
         path="/"
         element={
           <Layout>
-            <h1>Homepage</h1>
+            <Products />
           </Layout>
         }
       />
