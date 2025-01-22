@@ -1,5 +1,5 @@
 import { useGetAllProducts } from "@/api/fetchProductApi";
-import LoadingSkeleton from "../loading-skeleton/loading-skeleton";
+import LoadingSkeleton from "../../components/loading-skeleton/loading-skeleton";
 import { Link } from "react-router";
 
 type ProductData = {

@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router";
 import Layout from "./components/layout/layout";
-import Products from "./components/products/products";
-import SingleProduct from "./components/single-product/single-product";
+import Products from "./pages/products/products";
+import SingleProduct from "./pages/single-product/single-product";
 
 function App() {
   return (
