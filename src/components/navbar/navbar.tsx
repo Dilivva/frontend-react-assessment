@@ -1,10 +1,4 @@
-import {
-  Dialog,
-  DialogTrigger,
-  DialogContent,
-  DialogTitle,
-  DialogDescription,
-} from "../ui/dialog";
+import { Dialog, DialogTrigger, DialogContent } from "../ui/dialog";
 import { Link } from "react-router";
 import { DialogHeader } from "../ui/dialog";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
@@ -80,13 +74,7 @@ const Navbar = () => {
                   <Search />
                 </DialogTrigger>
                 <DialogContent>
-                  <DialogHeader>
-                    <DialogTitle>Are you absolutely sure?</DialogTitle>
-                    <DialogDescription>
-                      This action cannot be undone. This will permanently delete
-                      your account and remove your data from our servers.
-                    </DialogDescription>
-                  </DialogHeader>
+                  <DialogHeader>Mobile Search Comes here...</DialogHeader>
                 </DialogContent>
               </Dialog>
               <Sheet>
