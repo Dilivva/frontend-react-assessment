@@ -1,5 +1,6 @@
 import { useGetAllProducts } from "@/api/fetchProductApi";
 import LoadingSkeleton from "../loading-skeleton/loading-skeleton";
+import { Link } from "react-router";
 
 type ProductData = {
   id: number;
@@ -10,11 +11,37 @@ type ProductData = {
 };
 
 const Products = () => {
-  const { products, isLoading } = useGetAllProducts();
-  console.log(products);
-  return isLoading ? (
-    <LoadingSkeleton />
-  ) : products ? (
+  const { products, isLoading, isError } = useGetAllProducts();
+
+  if (isLoading) {
+    return <LoadingSkeleton />;
+  }
+
+  if (isError) {
+    return (
+      <div className=" lg:ml-[250px]">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-center space-y-4">
+            <h2 className="text-2xl font-bold text-red-500">
+              Error Loading Products
+            </h2>
+            <p className="text-gray-500">
+              Oops! Something went wrong while fetching the product data. Please
+              try again later.
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition"
+            >
+              Retry
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  return products ? (
     <div className="mt-[80px] lg:ml-[250px] p-10">
       <div className="w-full min-h-screen">
         <h2 className="text-4xl font-bold text-primary-dark lg:my-10">
@@ -22,7 +49,8 @@ const Products = () => {
         </h2>
         <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[40px]">
           {products.map((product: ProductData) => (
-            <div
+            <Link
+              to={product.id.toString()}
               className="flex flex-col space-y-3 w-full hover:bg-gray-50 p-3 transition-all"
               key={product.id}
             >
@@ -39,7 +67,7 @@ const Products = () => {
                 </h1>
                 <div className="h-[50px] w-[250px] px-2">${product.price}</div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

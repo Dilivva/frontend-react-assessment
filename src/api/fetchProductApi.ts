@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import { toast } from "sonner";
 
 const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "https://fakestoreapi.com/products";
+  import.meta.env.VITE_API_BASE_URL || "https://fakestoreapi.com/productss";
 
 export const useGetAllProducts = () => {
   const getProductsRequest = async () => {
@@ -18,18 +18,19 @@ export const useGetAllProducts = () => {
     return response.json();
   };
 
-  const { data: products, isLoading } = useQuery(
-    "fetchCampaigns",
-    getProductsRequest,
-    {
-      onError: () => {
-        toast.error("Failed to fetch products");
-      },
-    }
-  );
+  const {
+    data: products,
+    isLoading,
+    isError,
+  } = useQuery("fetchCampaigns", getProductsRequest, {
+    onError: () => {
+      toast.error("Failed to fetch products");
+    },
+  });
 
   return {
     products,
     isLoading,
+    isError,
   };
 };
