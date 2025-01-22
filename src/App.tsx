@@ -1,11 +1,18 @@
-import { Button } from "./components/ui/button";
+import { Routes, Route } from "react-router";
+import Layout from "./components/layout/layout";
 
 function App() {
   return (
-    <div className="text-3xl font-bold ">
-      <h1 className="text-primary">Hello</h1>
-      <Button>Click me</Button>
-    </div>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <Layout>
+            <h1>Homepage</h1>
+          </Layout>
+        }
+      />
+    </Routes>
   );
 }
 
