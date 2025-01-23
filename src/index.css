@@ -36,8 +36,10 @@ h1 {
 }
 
 button {
+  outline: none;
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid #e87003;
+  color:  #e87003;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
