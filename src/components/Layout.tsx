@@ -8,7 +8,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="flex flex-col min-h-screen bg-gray-100 w-full">
-
+{/* header */}
       <header className="bg-[#E87003] text-white">
         <div className="container mx-auto flex justify-between items-center py-4 px-4 md:px-8">
           <h1 className="text-l font-semibold">Delivva</h1>
@@ -40,10 +40,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
       </header>
 
-
+{/* main */}
       <main className="flex-grow container mx-auto p-4 md:p-8">{children}</main>
 
-
+{/* footer */}
       <footer className="bg-gray-800 text-white">
         <div className="flex items-center justify-center container mx-auto py-4 px-4 md:px-8 text-center">
           <p className="text-sm">&copy; 2025 Delivva. All rights reserved.</p>

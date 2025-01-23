@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../components/Layout';
 
+// DEFINE TYPE
 interface Users {
   name: {
     first: string;
@@ -15,6 +16,7 @@ interface Users {
 }
 
 const Home: FC = () => {
+  // SET STATES
   const [data, setData] = useState<Users[]>([]);
   const [filteredData, setFilteredData] = useState<Users[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
@@ -24,7 +26,7 @@ const Home: FC = () => {
   const resultsPerPage = 5;
 
   const navigate = useNavigate();
-
+// FETCH DATA
   useEffect(() => {
     const getUsers = async () => {
       setLoading(true);
@@ -42,6 +44,7 @@ const Home: FC = () => {
     getUsers();
   }, []);
 
+  // SEARCH DATA
   useEffect(() => {
     const filtered = data.filter(({ name, email }) => {
       const fullName = `${name.first} ${name.last}`.toLowerCase();
@@ -53,6 +56,7 @@ const Home: FC = () => {
     setCurrentPage(1); // Reset to the first page on new search
   }, [search, data]);
 
+  // PAGINATE DATA
   const handlePageChange = (direction: 'next' | 'prev') => {
     if (direction === 'next' && currentPage < Math.ceil(filteredData.length / resultsPerPage)) {
       setCurrentPage((prev) => prev + 1);
