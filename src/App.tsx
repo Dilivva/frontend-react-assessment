@@ -3,6 +3,7 @@ import './App.css'
 import { NotFound } from './components/NotFound'
 import Layout from './layout/Layout'
 import HomePage from './pages/HomePages'
+import DetailsPage from './pages/DetailsPage'
 
 
 
@@ -16,7 +17,11 @@ const router = createBrowserRouter([
               path:'/',
               index: true,
               element: <HomePage />
-          }
+          },
+          {
+            path:'/details/:id',
+            element: <DetailsPage />
+        }
       ]
   }
 ])

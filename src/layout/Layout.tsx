@@ -13,14 +13,11 @@ const Layout: FC<ILayoutProps> = () => {
               <Link to="/" className="text-xl font-bold">
                 MyApp
               </Link>
-              <nav>
+              {/* <nav>
                 <Link to="/" className="mr-4 hover:underline">
                   Home
                 </Link>
-                <Link to="/details/1" className="hover:underline">
-                  Details
-                </Link>
-              </nav>
+              </nav> */}
             </div>
           </header>
     
