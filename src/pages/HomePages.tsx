@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Loader from "../components/Loader";
 import AnimateRoute from "../components/AnimateRoute";
+import { NotFound } from "../components/NotFound";
 
 const HomePage: React.FC = () => {
   const [data, setData] = useState([]);
@@ -29,6 +30,9 @@ const HomePage: React.FC = () => {
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  if (loading) return (<Loader />);
+  if (error) return (<NotFound />);
+
   return (
     <AnimateRoute>
       <h1 className="text-2xl font-bold mb-6">Home Page</h1>
@@ -37,7 +41,7 @@ const HomePage: React.FC = () => {
       <input
         type="text"
         placeholder="Search by title..."
-        className="w-full p-2 border border-gray-300 rounded mb-6"
+        className="w-full h-[40px] p-2 border border-gray-300 mb-6"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
@@ -47,7 +51,7 @@ const HomePage: React.FC = () => {
         <table className="table-auto w-full border-collapse border border-gray-300">
           <thead>
             <tr className="bg-gray-100">
-              <th className="border border-gray-300 px-4 py-2 text-left">ID</th>
+              <th className="border border-gray-300 px-4 py-2 text-left">S/N</th>
               <th className="border border-gray-300 px-4 py-2 text-left">Title</th>
             </tr>
           </thead>
