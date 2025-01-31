@@ -1,8 +1,9 @@
 import delivavLogo from './dilivva-logo.png'
-
+import profile from './profile.jpg'
 
 export const Image = {
     delivavLogo,
+    profile
 }
 
 export const logo = (): any => {

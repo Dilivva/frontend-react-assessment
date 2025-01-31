@@ -1,33 +1,39 @@
 @import "tailwindcss";
+
 :root {
+  --primary-color: rgba(255, 255, 255, 0.87);
+  --background-color: #242424;
+  --accent-color: #e87003;
+  --hover-color: rgb(190, 190, 190);
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-a {
-  font-weight: 500;
-  color: #fff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: rgb(190, 190, 190);
+
 }
 
 body {
   margin: 0;
   place-items: center;
-  min-width: 320px;
   min-height: 100vh;
+  color: var(--primary-color);
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--hover-color);
 }
 
 h1 {
@@ -38,33 +44,47 @@ h1 {
 button {
   outline: none;
   border-radius: 8px;
-  border: 1px solid #e87003;
-  color:  #e87003;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.25s;
 }
 button:hover {
-  color: rgb(190, 190, 190);
+  background-color: var(--accent-color);
+  color: #fff;
+  border-color: var(--hover-color);
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 3px solid var(--accent-color);
 }
 
+/* Light Mode */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    --primary-color: #213547;
+    --background-color: #ffffff;
+  }
+
+  body {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+  }
+
+  a {
+    color: var(--primary-color);
   }
   a:hover {
-    color: rgb(190, 190, 190);
+    color: var(--hover-color);
   }
+
   button {
     background-color: #f9f9f9;
+    color: var(--accent-color);
   }
 }
