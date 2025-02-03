@@ -14,6 +14,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { useProductSearch } from "@/contexts/ProductSearchContext";
 
 type sidebarLinks = {
   link: string;
@@ -22,6 +23,11 @@ type sidebarLinks = {
 };
 
 const Navbar = () => {
+  const { productSearch, setProductSearch } = useProductSearch();
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setProductSearch(event.target.value);
+  };
   const SIDENAVLINKS: sidebarLinks[] = [
     {
       link: "/",
@@ -39,8 +45,10 @@ const Navbar = () => {
               <input
                 className="w-[85%] h-full border-none outline-none px-2"
                 placeholder="Search for a product..."
+                value={productSearch}
+                onChange={handleSearchChange}
               />
-              <Button className="flex items-center justify-center bg-primary-dark text-white w-[20%] h-full hover:bg-primary-light">
+              <Button className="flex items-center justify-center bg-white text-primary-light w-[20%] h-full rounded-none hover:bg-white">
                 <Search />
               </Button>
             </div>

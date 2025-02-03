@@ -5,6 +5,7 @@ import "./index.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Toaster } from "sonner";
+import { ProductSearchProvider } from "./contexts/ProductSearchContext.tsx";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -18,7 +19,9 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Router>
       <QueryClientProvider client={queryClient}>
-        <App />
+        <ProductSearchProvider>
+          <App />
+        </ProductSearchProvider>
         <Toaster visibleToasts={1} position="top-right" richColors />
       </QueryClientProvider>
     </Router>
