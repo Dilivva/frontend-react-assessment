@@ -1,9 +1,12 @@
-import { Dialog, DialogTrigger, DialogContent } from "../ui/dialog";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+} from "../ui/dialog";
 import { Link } from "react-router";
-import { DialogHeader } from "../ui/dialog";
 import { Sheet, SheetContent, SheetTrigger } from "../ui/sheet";
-import { Menu, Search } from "lucide-react";
-import { Store } from "lucide-react";
+import { Menu, Search, Store } from "lucide-react";
 import { Button } from "../ui/button";
 import {
   DropdownMenu,
