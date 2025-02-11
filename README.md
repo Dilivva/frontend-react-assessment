@@ -1,85 +1,118 @@
-This project was bootstrapped with [ React Vite App](https://github.com/facebook/create-react-app).
+# Frontend React Developer Assessment
 
-### Project setup
+![Dilivva Logo](./assets/dilivva-logo.png)
 
-Install all dependencies
+Welcome to the **Frontend React Developer Assessment** for Send24 (Dilivva Int'l Tech Inc). This test is designed to evaluate mid-level React developers' skills in building modern frontend applications, implementing best practices, and using Git workflows effectively.
 
-```bash
-npm install
-```
+---
 
-run the development server:
+## Objective
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+The goal of this assessment is to:
+- Test your knowledge of **React** and related modern frontend development practices.
+- Evaluate your proficiency with **state management**, **API integration**, and **UI/UX best practices**.
+- Assess your ability to use **Git** and collaborate via **GitHub** (branching, commits, and pull requests).
 
-- Run the tests
+---
 
-```bash
-npm run test
-```
+## Task Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You will create a small React application based on the requirements provided below. The application should demonstrate your understanding of key React concepts and your ability to work with external APIs.
 
-You can start editing the page by modifying `app.js`. The page auto-updates as you edit the file.
+---
 
-## Additional Information: API Keys
+## Requirements
 
-After you start the application, you will need to set up an additional `.env` file to store the required API keys. These API keys are necessary for the application to interact with The Movie Database (TMDb) API and fetch movie information.
+### Features to Implement
+1. **User Interface:**
+   - Create a responsive user interface with a simple, clean design.
+   - Include a header and a footer.
 
-### Obtaining API Keys
+2. **Routing:**
+   - Implement basic routing using `react-router`.
+   - Include at least two pages: a **home /Landing page** and a **details page (or etc)** for individual items from the list.
+     
+3. **State Management:**
+   - Use React hooks (e.g., `useState`, `useEffect`) for state management.
+     
+4. **Data Fetching:**
+   - Fetch any data from any opened API endpoint and display it in a list, graph, or table format (surprise us).
+   - Handle loading states, pagination and API errors gracefully.
 
-To obtain the API keys, follow these steps:
+5. **Search Functionality:**
+   - Add a search bar to filter the displayed data in real-time.\
 
-1. Visit the TMDb website at [https://developer.themoviedb.org/reference/intro/authentication](https://developer.themoviedb.org/reference/intro/authentication).
-2. Register for an account or log in if you already have one.
-3. Once logged in, you can access your API keys from the developer dashboard.
+6. **Styling:**
+   - Use a CSS framework (e.g., TailwindCSS or Bootstrap) or write custom CSS to style the app.
+  
+7. **Package:**
+   - Use at least one extra package while working on No 1-6.
+   - Wow us technically with your code structure, organization, code structiure, commenting and resuability.
 
-### .env File Setup
+9. **Git Workflow:**
+   - Your branch is named `firstname-lastname-assessment`.
+   - Commit your changes incrementally with meaningful messages.
+   - Commit a minimum of 3 to a maximum of 6 commits.
+   - Push and open a Pull Request from your branch to the branch named `submit`.
 
-Create a `.env` file at the root folder of your project and add the following content:
+---
 
-```bash
-VITE_APP_TMBD_TOKEN=YOUR_API_TOKEN_HERE
-VITE_APP_TMBD_API_KEY=YOUR_API_KEY_HERE
-```
+## Instructions
 
-## Project name
+1. **Access the Repository:**
+   - You have been granted access to this repository for the duration of the assessment.
 
-Send 24 Movie App
+2. **Clone the Repository:**
+   ```bash
+   git clone <repository-url>
+   cd frontend-react-assessment
+   ```
 
-### Project technologies
+3. **Switch to your work Branch:**
+  
 
-- React.js
-- Tailwind CSS
-- Redux-toolkit
-- scss
-- TMBD (Movies API)
-- ESLint
+4. **Implement the Features:**
+   - Follow the requirements outlined above.
+   - Commit your changes with clear and concise messages:
+     ```bash
+     git commit -m "Added ... functionality to the ..."
+     ```
 
-### Project structure explanation
+5. **Push Your Branch:**
+   ```bash
+   git push origin firstname-lastname-assessment
+   ```
 
-- `root folder` - The main folder of the project, contains all the code of the project.
-  - `pages` - Contains all the pages of the project.
-  - `components` - Contains all the components of the project.
-  - `store` - store.js (File for setting up the Redux store) - homeSlice.js (Redux slice for the home-related state management)
-  - `hooks` - Contains useFetch for API.
-  - `tailwind.config.js` - Contains all the styles of the project.
-- `public` - Contains all the public files of the project.
+6. **Optional - Create a Pull Request (PR):**
+   - If instructed, open a pull request from your branch to the `submit` branch.
+   - Add a description summarizing your work, or stating extra information for the review committee 
 
-### Project deployment
+---
 
-- Deploy the project to Vercel
+## Evaluation Criteria
 
-```bash
-npm run deploy
-```
+Your submission will be evaluated on the following:
+- **Code Quality:** Readability, organization, and adherence to best practices.
+- **Functionality:** Completeness of features and bug-free implementation.
+- **UI/UX:** Visual appeal and user experience.
+- **Git Usage:** Proper use of branches, commits, and pull requests.
+- **Error Handling:** Graceful handling of API errors and edge cases.
+- **Timeliness:** Timeliness is key, even if you are not able to finish it up.
 
-### Project Live link
+---
 
-## Author
+## Additional Notes
 
-- Ekunola Paul
+- You can use any external libraries that you find helpful, but be free to explain your choices.
+- Ensure your application runs without errors before submitting, its ok if it doesnt though 🤪🤪.
+- If you have any questions, feel free to reach out to the Head of the Technical Assessment committee `enochoyerinde(at)send24(dot)co` .
+
+---
+
+## Submission Deadline
+
+All branches must be pushed 2Hhrs 30Min upon recieving the assessment email.
+
+---
+
+We look forward to reviewing your work! Good luck!
