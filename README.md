@@ -1,6 +1,6 @@
 # Frontend React Developer Assessment
 
-![Dilivva Logo](./assets/dilivva-logo.png)
+![Dilivva Logo](send24/src/assets/dilivva-logo.png)
 
 Welcome to the **Frontend React Developer Assessment** for Send24 (Dilivva Int'l Tech Inc). This test is designed to evaluate mid-level React developers' skills in building modern frontend applications, implementing best practices, and using Git workflows effectively.
 
