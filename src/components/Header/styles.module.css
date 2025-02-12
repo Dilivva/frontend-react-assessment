@@ -1,0 +1,90 @@
+.container {
+  height: 60px; 
+  background-color: #171a25;;
+  width: 100vw;
+  z-index: 10;
+  padding: 0px 20px;
+  
+  position: fixed;
+  left: 0px;
+  top: 0px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuIcon {
+  color: white;
+}
+
+.containerTwo {
+  display: flex;
+  column-gap: 20px;
+}
+
+.contentThree {
+  display: none;
+  column-gap: 10px;
+  align-items: center;
+  height: 100%;
+}
+
+.contentOne {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  height: 100%;
+}
+
+.icon {
+  background-color: #1C62EB;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.headerText {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.contentTwo {
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.helpIcon {
+  color: white;
+}
+
+.profile {
+  height: 36px;
+  width: 36px;
+  background-color: #103b8e;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileText {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 1300px) {
+  .contentThree {  
+    display: flex;
+  } 
+
+  .container {
+    padding-right: 0px;
+  }
+}

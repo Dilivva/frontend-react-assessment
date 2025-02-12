@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+  color: #50525a;
+  font-size: 18px;
+}
+
+.iconContainer {
+  display: flex;
+  width: 30px;
+  position: relative;
+}
+
+.iconLeft {
+  position: absolute;
+  top: -10px;
+  left: 0px;
+}
+
+.iconRight {
+  position: absolute;
+  top: -10px;
+  right: 0px;
+}

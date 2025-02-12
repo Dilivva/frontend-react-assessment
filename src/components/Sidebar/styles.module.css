@@ -1,0 +1,83 @@
+.container {
+  background-color: #171a25;
+  height: 100vh; 
+  width: 228px;
+
+  padding-top: 60px;  /* To offset the fixed header height*/
+
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.navContainer {
+  margin: 30px 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.fadingBorder {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, #4d4d4d, transparent);
+}
+
+.textOne {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.itemContainer, .itemContainerActive {
+  display: flex;
+  height: 56px;
+  align-items: center;
+  column-gap: 20px;
+  padding-left: 20px;
+  cursor: pointer;
+  transition: all .4s;
+}
+
+.itemContainerActive {
+  background-color: #292f48;
+  position: relative;
+}
+
+.itemContainerActive::before {
+  height: 100%;
+  width: 5px;
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  background-color: #76a0f0;
+}
+
+
+.itemContainer:hover {
+  background-color: #292f48;
+}
+
+.icon {
+  color: #76a0f0;
+}
+
+
+@media (max-width: 1300px) {
+  .container {  
+    display: none;
+  } 
+}

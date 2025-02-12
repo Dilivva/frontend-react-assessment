@@ -1,0 +1,107 @@
+.tableContainer {
+  padding: 1rem;
+  margin-top: 20px;
+  width: calc(95vw - 228px);
+  height: 500px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+
+  scrollbar-width: none;
+}
+
+.customTable {
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+.customTable th {
+  padding: 10px 0px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.customTable tbody {
+  margin: 5px;
+}
+
+.tableRow, .cellRow {
+  display: grid;
+  grid-template-columns: 380px 293px 180px 141px 180px  180px  180px;
+  align-items: center;
+}
+
+.tableRow {
+  height: 50px;
+}
+
+.cellRow {
+  height: 84px;
+}
+
+.customTable tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+
+.loading {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.pagination button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btnActive {
+  background-color: #007bff !important;
+  color: white !important;
+  border-color: #007bff !important;
+}
+
+.pagination button:disabled {
+  background-color: #f1f1f1;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.pageContainer {
+  display: flex;
+  column-gap: 5px;
+}
+
+.currentPage {
+  width: 50px;
+  height: 30px;
+  border: 1px solid #BBBCC2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 1300px) {
+  .tableContainer {
+    width: 95vw  
+  }
+}
+
+@media (max-width: 700px) {
+  .tableContainer {
+    width: 90vw
+  }
+}
